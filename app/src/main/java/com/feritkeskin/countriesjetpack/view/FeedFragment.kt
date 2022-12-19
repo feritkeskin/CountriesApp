@@ -34,7 +34,7 @@ class FeedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProviders.of(this).get(FeedViewModel::class.java)
-        viewModel.refreshData()
+        viewModel.refreshFromAPI()
 
         countryRecyclerList.layoutManager = LinearLayoutManager(context)
         countryRecyclerList.adapter = countryAdapter
